@@ -16,7 +16,7 @@ namespace Statistics.Constants
     public static class API
     {
         public const string 
-            Schema = "https",
+            Scheme = "https",
             Host = "",
             WeaponUsagePath = "";
     }

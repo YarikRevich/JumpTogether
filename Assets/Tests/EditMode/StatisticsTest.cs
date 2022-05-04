@@ -7,7 +7,7 @@ using UnityEngine.Assertions;
 
 public class StatisticsTest
 {
-    private string Host = "https://www.postman-echo.com"
+    private string Host = "https://www.postman-echo.com";
 
     // A Test behaves as an ordinary method
     [Test]

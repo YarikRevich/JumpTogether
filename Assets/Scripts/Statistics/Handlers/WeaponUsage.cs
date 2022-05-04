@@ -6,12 +6,20 @@ public class WeaponUsage : StatisticsEntity<WeaponUsageModel>
 {  
     public IEnumerator SendRequest(WeaponUsageModel model)
     {
-        using (WebRequest request = WebRequest.PostString($"{Host}/{WeaponUsagePath}", model.ToString()))
+        using (UnityWebRequest request = WebRequest.PostString($"{Statistics.Constants.API.Host}/{Statistics.Constants.API.WeaponUsagePath}", model.ToString()))
         {
-            yield return www.SendWebRequest();
+            yield return request.SendWebRequest();
+            // #if UNITY_EDITOR
+            // // switch (request.ResponseCode)
+            // // {
+                
+            // // }
+            // #endif
 
+                // if (www.result != UnityWebRequest.Result.Success)
             
-            // if (www.result != UnityWebRequest.Result.Success)
+            
+            // 
             // {
             //     Debug.Log(www.error);
             // }

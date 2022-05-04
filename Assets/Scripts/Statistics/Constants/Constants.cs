@@ -3,19 +3,21 @@ using System.Collections.Generic;
 
 namespace Statistics.Constants
 {
-    enum Weapons
+    public enum Weapons
     {
         SWORD
     };
 
-    enum Maps
+    public enum Maps
     {
         HELLOWEEN
     };
 
-    namespace API
+    public static class API
     {
-        const string Host = "";
-        const string WeaponUsagePath = "";
+        public const string 
+            Schema = "https",
+            Host = "",
+            WeaponUsagePath = "";
     }
 }

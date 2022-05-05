@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuitButton : MonoBehaviour
+public class ProgressBar : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,10 +14,5 @@ public class QuitButton : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnClick()
-    {
-        Application.Quit();
     }
 }

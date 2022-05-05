@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class QuitButton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,11 +16,8 @@ public class StartButton : MonoBehaviour
         
     }
 
-    IEnumerator OnClick()
+    public void OnClick()
     {
-        AsyncOperation loadingScene = SceneManager.LoadSceneAsync("Game");
-        while (!loadingScene.isDone){
-            yield return null;
-        }
+        Application.Quit();
     }
 }

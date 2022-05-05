@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OptionsButton : MonoBehaviour
+public class StartButton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,11 +17,11 @@ public class OptionsButton : MonoBehaviour
         
     }
 
-    IEnumerator OnClick()
+    public void OnClick()
     {
-        AsyncOperation loadingScene = SceneManager.LoadSceneAsync("Options");
-        while (!loadingScene.isDone){
-            yield return null;
-        }
+        // AsyncOperation loadingScene = SceneManager.LoadSceneAsync("Game");
+        // while (!loadingScene.isDone){
+        //     yield return null;
+        // }
     }
 }

@@ -1,27 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GradientColor : MonoBehaviour
 {
-    public GameObject gameObject;
-
-    private Material m_Material;
-    private Gradient gradient;
-
+    public Image image;
     public Color color1;
     public Color color2;
     public float relativeTime = .25f;
 
+    private Gradient gradient;
     private GradientColorKey[] colorKey;
     private GradientAlphaKey[] alphaKey;
 
-    void Awake()
-    {
-        m_Material = gameObject.GetComponent<Renderer>().material;
-    }
-
-    void Start()
+    void Update()
     {
         gradient = new Gradient();
 
@@ -39,6 +32,6 @@ public class GradientColor : MonoBehaviour
 
         gradient.SetKeys(colorKey, alphaKey);
         
-        m_Material.color =  gradient.Evaluate(relativeTime);
+        image.color =  gradient.Evaluate(relativeTime);
     }
 }
